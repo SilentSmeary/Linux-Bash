@@ -23,9 +23,9 @@ case $choice in
 
         sudo apt install chromium-browser -y
 
-        apt install okular -y
+        sudo apt install okular -y
 
-        apt autoremove -y
+        sudo apt autoremove -y
 
         echo "[#]  Project Libre Installed"
         echo "[#]  Thonny Installed"
