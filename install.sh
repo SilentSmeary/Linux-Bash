@@ -1,3 +1,8 @@
+# Variables for the domain and credentials
+DOMAIN="tlevel.digital"
+USER="join.domian"
+PASSWORD="Tlevel24!"
+
 echo "[1]   System Updates"
 echo "[2]   Start Setup Script"
 echo "[3]   Exit"
@@ -28,6 +33,10 @@ case $choice in
         sudo apt install sssd-ad sssd-tools realmd adcli
 
         sudo realm -v discover tlevel.digital
+
+        echo $PASSWORD | sudo realm join -U $USER $DOMAIN
+
+        getent passwd join.domain@tlevel.digital
 
         sudo apt autoremove -y
 
