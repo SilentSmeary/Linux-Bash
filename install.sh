@@ -25,6 +25,10 @@ case $choice in
 
         sudo apt install okular -y
 
+        sudo apt install sssd-ad sssd-tools realmd adcli
+
+        sudo realm -v discover tlevel.digital
+
         sudo apt autoremove -y
 
         echo "[#]  Project Libre Installed"
